@@ -16,44 +16,89 @@ activity gives you real experience with several of them **before** you get there
 to use them well: what deep learning and generative AI actually are (updated for 2026), how people
 build with them today, and how to use them responsibly.
 
-### Your Tasks
+---
 
-1. **Read the three content tabs** and try the three demos. Answer Part A of `A18_ToolReviews.md`.
-
-   > 💡 **Hint:** Part A's answers come straight from the demos: change the filter, the temperature,
-   > and the diffusion step, and read the numbers the app shows.
-
-2. **Mission 1 (S34): train an image classifier** with Google Teachable Machine (no account needed).
-
-   > 💡 **Hint:** Testing in *new* conditions is the point of this mission. A model that is perfect at
-   > your desk and fails in the hallway is teaching you about training data.
-   >
-   > <img width="592" height="365" alt="image" src="https://github.com/user-attachments/assets/53305f78-cf02-4d24-9604-c509535fae0a" />
+# Activity 18 — Tool Reviews: AI at Work
 
 
-3. **Mission 2 (S35): two assistants, one work task** with Gemini (school Google account) and Copilot Chat (school Microsoft account).
+## Part A — Content check (from the app)
 
-   > 💡 **Hint:** Give both assistants exactly the same memo and requests, so the comparison is fair.
-   > Read their answers against the memo line by line: invented details are easy to miss.
+**A1.** In the *Deep Learning* tab, which **edge filter (A or B)** highlights the **vertical** edges of the photo? Write its 9 numbers.
 
-4. **Mission 3 (S35): research with sources** in Gemini Notebook (school Google account).
+<img width="575" height="484" alt="Captura de pantalla 2026-11-15 174613" src="https://github.com/user-attachments/assets/c013835a-e748-4516-9f5f-3d52033a74ef" />
 
-   > 💡 **Hint:** Click a citation and read the original passage yourself. A correct-looking citation
-   > is not the same as a correct answer.
 
-5. **Mission 4 (S36): build an app by describing it** with Google AI Studio (or Bolt.new, or Lovable).
 
-   > 💡 **Hint:** Keep the app small. Ask for one change at a time, and test after every change.
+<img width="560" height="469" alt="Captura de pantalla 2026-11-15 174624" src="https://github.com/user-attachments/assets/f9a8bf14-ea93-4823-8a3d-ca1b77ba0256" />
 
-6. **Optional bonus: create a marketing image** with Adobe Firefly (or Canva) and check its Content Credentials.
 
-7. **Fill out `A18_ToolReviews.md`** (one card per mission, plus Parts A and C) and submit it with your screenshots (a `.zip` with the `.md` file and the images is fine).
 
-   > 💡 **Hint:** Before submitting, check each part against **How Your Grade Is Calculated** below.
+**A2.** In the *Generative AI* tab, what is the probability of the word **"food"** at temperature **0.5**, and at temperature **1.5**? In one sentence: what does raising the temperature do?
+
+<img width="592" height="365" alt="Captura de pantalla 2026-11-15 174709" src="https://github.com/user-attachments/assets/eb55f08e-b72e-457b-a548-8bbe76fee939" />
+
+<img width="556" height="358" alt="image" src="https://github.com/user-attachments/assets/463fd826-f217-41fc-80fb-41f908c74cb8" />
+
+
+
+**A3.** In the diffusion demo, what share of the original image is kept (√ᾱₜ) at step **t = 250**, and at step **t = 500**?
+
+<img width="569" height="422" alt="image" src="https://github.com/user-attachments/assets/3d95e06a-5f59-4d6f-96fc-af81d32c62df" />
+
+<img width="568" height="434" alt="image" src="https://github.com/user-attachments/assets/097b421d-0786-43dd-9a55-1170c477d579" />
+
+
+
+**A4.** Pick **one** row from any "What the lecture says vs. what is accurate" table and explain the correction in your own words.
+
+*BUILDING WITH GEN AI (S36)
+
+<img width="578" height="249" alt="image" src="https://github.com/user-attachments/assets/112bcdb5-c441-4a48-a45e-4855e2627722" />
 
 ---
 
+## Part B — Tool Review Cards
 
+Copy this card once for each mission.
+
+### Mission __: ____________________
+
+- **Tool(s) used and account type** (school Google / school Microsoft / personal / none):
+- **What I did** (2–4 sentences):
+- **My exact prompts** (copy them):
+- **Evidence** (screenshots, counts, links):
+- **Ratings** (1 = poor, 5 = excellent), with **one reason each**:
+  - Usefulness for real work:
+  - Accuracy / quality of the output:
+  - Ease of use:
+  - How much I would trust it without checking:
+- **One error or limitation I found, and how I checked it:**
+- **Free-plan limit I ran into (or "none"):**
+- **Privacy:** what does this tool do with my data, and where did I find that out (setting or page)?
+- **How I would use this tool in my field** (business, digital animation, IT...):
+
+*(Mission 1: include your counts for same vs. new conditions. Mission 2: compare the two assistants and
+report the fact you checked and its source. Mission 3: include the citation you checked and what happened
+with the question outside the document. Mission 4: include your 3 tests, the bug, and your verdict on the
+lecture's "we're not there yet" quote.)*
+
+### Bonus (optional, up to 5 extra points)
+
+Same card, plus the **Content Credentials** result from contentcredentials.org/verify and the sentence
+from the tool's terms about commercial use (with its link).
+
+---
+
+## Part C — Looking back
+
+**C1. Comparison.** Which tool would you actually use again, and which not? Compare at least three of the
+tools you tried, using your ratings and evidence from Part B.
+
+**C2. Your career.** When AI tools can do routine parts of your future job, which of your skills become
+*more* valuable? Give two concrete examples from your missions.
+
+**C3. AI-use disclosure.** Did you use any AI tool to write or edit *this file*? If yes, which one, and for
+what exactly? (Honest disclosure is worth the points; using AI for wording help is allowed if you say so.)
 
 
 
