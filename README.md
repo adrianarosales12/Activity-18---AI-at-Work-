@@ -27,6 +27,9 @@ build with them today, and how to use them responsibly.
 
    > 💡 **Hint:** Testing in *new* conditions is the point of this mission. A model that is perfect at
    > your desk and fails in the hallway is teaching you about training data.
+   >
+   > <img width="592" height="365" alt="image" src="https://github.com/user-attachments/assets/53305f78-cf02-4d24-9604-c509535fae0a" />
+
 
 3. **Mission 2 (S35): two assistants, one work task** with Gemini (school Google account) and Copilot Chat (school Microsoft account).
 
