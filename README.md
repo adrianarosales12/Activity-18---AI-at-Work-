@@ -67,26 +67,28 @@ build with them today, and how to use them responsibly.
 
 Copy this card once for each mission.
 
-### Mission __: ____________________
+### Mission 1: Image Classifier (Deep Learning)
 
-- **Tool(s) used and account type** (school Google / school Microsoft / personal / none):
-- **What I did** (2–4 sentences):
-- **My exact prompts** (copy them):
-- **Evidence** (screenshots, counts, links):
+- **Tool(s) used and account type:** Google Teachable Machine (no account used / logged out)[cite: 9, 11].
+- **What I did:** I created a standard image classification project with three everyday objects from my desk: a hair clip (*Pinza*), a computer mouse (*Mouse*), and a makeup compact (*Maquillaje*)[cite: 9, 11]. I recorded over 50 webcam samples for each class under the same lighting and background (56, 53, and 53 samples respectively), trained the MobileNet-based model in my browser, and tested its accuracy in the Preview panel under both original and altered conditions
+- **My exact prompts:** None (this tool uses labeled webcam image classes instead of text prompts: `Pinza`, `Mouse`, and `Maquillaje`)
+- **Evidence:** Screenshot `M1_teachable.png` attached below showing the 3 trained classes (+50 samples each) and live classification in the Preview panel
+  - **Same conditions (10 tests per class):** Pinza: `[X/10]`, Mouse: `[X/10]`, Maquillaje: `[X/10]`[cite: 9].
+  - **New conditions (`[ej. dimmer lighting / different angle / closer to camera]` - 10 tests per class):** Pinza: `[X/10]`, Mouse: `[X/10]`, Maquillaje: `[X/10]`.
 - **Ratings** (1 = poor, 5 = excellent), with **one reason each**:
-  - Usefulness for real work:
-  - Accuracy / quality of the output:
-  - Ease of use:
-  - How much I would trust it without checking:
-- **One error or limitation I found, and how I checked it:**
-- **Free-plan limit I ran into (or "none"):**
-- **Privacy:** what does this tool do with my data, and where did I find that out (setting or page)?
-- **How I would use this tool in my field** (business, digital animation, IT...):
+  - Usefulness for real work: **4/5** — Very fast for building quick visual prototypes or proof-of-concept classifiers without writing code, though limited for complex production environments.
+  - Accuracy / quality of the output: **3/5** — Highly accurate when tested in the exact same room and lighting, but accuracy drops noticeably when lighting, angles, or backgrounds change. 
+  - Ease of use: **5/5** — The interface is completely visual and intuitive; recording samples and training the model takes less than five minutes.
+  - How much I would trust it without checking: **2/5** — Because it relies strictly on the visual patterns in the small training set, it can easily confuse objects when conditions shift or when two objects appear together.
+- **One error or limitation I found, and how I checked it:** When I changed the lighting and angle (or held two objects close to the camera at once, as seen in my screenshot where the hair clip and makeup compact overlap), the model's confidence fluctuated and misclassified items. I checked this by running 10 controlled trials per class in new conditions and observing the drop in correct predictions compared to the original desk setup, proving that the training dataset lacked diverse backgrounds, lighting, and angles.
+- **Free-plan limit I ran into (or "none"):** None (the tool is completely free to train and test in the browser without an account).
+- **Privacy:** According to the Teachable Machine FAQ and privacy details, training runs locally inside the web browser; if I close the tab without clicking "Upload my model" or saving to Google Drive, no images or model data are stored on any server.
+- **How I would use this tool in my field - to identify object and volumes.
 
-*(Mission 1: include your counts for same vs. new conditions. Mission 2: compare the two assistants and
-report the fact you checked and its source. Mission 3: include the citation you checked and what happened
-with the question outside the document. Mission 4: include your 3 tests, the bug, and your verdict on the
-lecture's "we're not there yet" quote.)*
+<img width="903" height="565" alt="Captura de pantalla 2026-11-15 183053" src="https://github.com/user-attachments/assets/13cd98fe-76d0-49a2-af67-595dce019237" />
+<img width="998" height="548" alt="Captura de pantalla 2026-11-15 182422" src="https://github.com/user-attachments/assets/9a09971c-1a93-45d8-b782-1c0bdabfdbcc" />
+
+
 
 ### Bonus (optional, up to 5 extra points)
 
