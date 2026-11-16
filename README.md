@@ -119,8 +119,36 @@ Copy this card once for each mission.
 
 ---
 
+### Mission 3: Research with Sources (Gemini Notebook / NotebookLM)
+
+- **Tool(s) used and account type:** Gemini Notebook / NotebookLM (`[school Google account / personal Google account]`).
+- **What I did:** I created a new notebook (`M3_UNESCO`) and uploaded UNESCO's official 2023 PDF report, *Guidance for generative AI in education and research* (`386693eng.pdf`)[cite: 17]. I asked three questions grounded in the document, opened the inline citations to verify the original source passages, and then asked a fourth question about post-2023 events (the August 2024 EU AI Act enforcement and GPT-5) to test if the tool would refuse to hallucinate[cite: 17, 18, 19].
+- **My exact prompts:**
+  1. `"What are the main risks or ethical concerns of generative AI in education mentioned in this report?"`
+  2. `"What minimum age limit does UNESCO recommend for students to independently use generative AI tools in classrooms?"`
+  3. `"How does the report suggest regulating generative AI providers and protecting user data privacy?"`
+  4. `"What does this document say about the EU AI Act entering into force in August 2024 or the release of GPT-5?"`
+- **Evidence:** Screenshots
+
+<img width="1276" height="589" alt="M3 3" src="https://github.com/user-attachments/assets/0ca6ab57-01d5-47dc-ac2e-98f115a5de7c" />
+<img width="1268" height="638" alt="M3 2" src="https://github.com/user-attachments/assets/65125de5-49a3-4dfe-b0d6-6d46f7a1746b" />
+<img width="1253" height="647" alt="M3 1" src="https://github.com/user-attachments/assets/861ff638-a79b-424c-a502-4d885e80de7e" />
+
+  - **Citation checked:** In Question 2, the tool stated that UNESCO recommends a minimum age threshold of **13 years old** for independent conversations with GenAI platforms, Clicking citation `[1]` opened the exact passage in `386693eng.pdf` confirming: *"The minimum threshold should be 13 years of age"*. 
+  - **Question outside the document:** When asked about the EU AI Act entering into force in August 2024 and GPT-5, NotebookLM did **not** invent an answer. It explicitly stated that the report dates from late 2023 and does not mention those events, clarifying that the PDF only discusses the 2021 proposed draft of the EU AI Act and GPT-4.
+- **Ratings** (1 = poor, 5 = excellent), with **one reason each**:
+  - Usefulness for real work: **5/5** — Grounding answers strictly in uploaded PDFs with clickable paragraph citations makes researching long technical documents much faster and safer.
+  - Accuracy / quality of the output: **5/5** — Every claim matched the underlying PDF text, and it refused to fabricate information when asked about post-2023 events.
+  - Ease of use: **5/5** — Uploading a PDF and clicking inline citation numbers to jump straight to the exact paragraph in the side panel is seamless.
+  - How much I would trust it without checking: **4/5** — Much more trustworthy than a standard chatbot because it refuses to answer outside its sources, though clicking the citation is still necessary to confirm context and nuance.
+- **One error or limitation I found, and how I checked it:** Unlike a general chatbot, NotebookLM cannot answer questions about current events or facts outside the uploaded files unless you explicitly use its web-search/Fast Research option; additionally, its summary sometimes condenses nuanced policy debates (such as proposals to raise the age limit to 16 under GDPR) into secondary bullet points. I verified this by opening the source side panel and reading the surrounding paragraphs in the original PDF.
+- **Free-plan limit I ran into (or "none"):** None (uploading the full UNESCO PDF and running queries worked without hitting free-tier limits).
+- **Privacy:** According to the course Tool Lab documentation and Google Workspace for Education policies, when using a school Google account, uploaded documents and notebook chats are not reviewed by humans or used to train Google's generative AI models.
+- **How I would use this tool in my field (Digital Animation Engineering):** I would upload multi-hundred-page technical documentation—such as Unreal Engine 5 manuals, Maya/Blender Python API docs, or game design bibles (GDDs)—into a notebook so the production team can quickly query specific shader, rigging, or pipeline rules with exact page citations instead of manually searching through PDFs.
+
 https://notebook.google.com/notebook/a705d02f-45c9-428f-bef5-2da6d80ffe42
 
+---
 
 
 
