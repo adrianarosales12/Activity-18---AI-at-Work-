@@ -150,12 +150,64 @@ https://notebook.google.com/notebook/a705d02f-45c9-428f-bef5-2da6d80ffe42
 
 ---
 
+### Mission 4: Build an App by Describing It (Animation Render & Frame Calculator)
+
+- **Tool(s) used and account type:** Google AI Studio (`[school Google account / personal Google account]`).
+- **What I did:** I described a single-file dark-mode "Animation Render & Frame Calculator" web app tailored for 3D animators, ran it directly in my browser, and tested it with three distinct scenarios (including an invalid negative/zero edge case). After spotting UI and validation issues during testing, I asked the assistant to refine the interface and error handling step by step.
+- **My exact prompts:**
+  - Initial prompt: `"Build a clean, dark-mode 'Animation Render & Frame Calculator' web app for 3D animators. Users should enter: 1. Project Name (text), 2. Frame Rate / FPS (dropdown: 24, 30, 60), 3. Total Duration in seconds (number), 4. Average Render Time per frame in seconds (number), 5. Number of Render Nodes / PCs (number, default 1). When clicking 'Calculate', show: Total Frames needed, Total Render Time formatted in hours and minutes, and a visual progress/breakdown bar."`
+  - Improvement 1: `"Fix the FPS dropdown width so '60 fps' doesn't get cut off, and show all validation errors at once if both duration and render nodes are 0 or negative."`
+  - Improvement 2: `"Add a 'Reset / Clear Form' button next to Calculate, and include an estimated cloud render cost breakdown ($0.50 per node-hour)."`
+- **Evidence:** Screenshots 
+
+<img width="776" height="524" alt="M4 1" src="https://github.com/user-attachments/assets/435eee79-2732-46a7-99f3-8cd1b48fd189" />
+<img width="271" height="335" alt="M4 4" src="https://github.com/user-attachments/assets/f1da3582-fd22-49d7-855a-a7698d1da225" />
+<img width="589" height="365" alt="M4 3" src="https://github.com/user-attachments/assets/fdfe5441-ce39-4302-b2bd-4a95777dad34" />
+<img width="600" height="617" alt="M4 2" src="https://github.com/user-attachments/assets/303ea8ec-1097-405f-896a-023c5b5f2013" />
+
+  - **Test 1 (Standard single-PC render):** `"Scene 01 - Walk Cycle"`, `24 fps`, `10s` duration, `15s` avg render time, `1` node → Output: **240 frames**, **1h 0m** total render time (`1x Node Speedup`).
+  - **Test 2 (Multi-node VFX render):** `"Scene 02- VFX Explosion"`, `60 fps`, `5s` duration, `45s` avg render time, `4` nodes → Output: **300 frames**, **0h 56m** wall time (`4x Node Speedup`, saving `2h 49m` compared to a single PC's `3h 45m`).
+  - **Test 3 (Strange / invalid input):** `"Scene 03 - Bug Test"`, `60 fps`, `-15s` duration, `01s` render time, `0` render nodes → Blocked calculation and displayed a red validation warning: *"Please enter a total duration greater than 0 seconds."*.
+  - **Verdict on the 2023 quote ("we're not there yet"):** For small, self-contained internal tools like this render calculator, the 2023 quote no longer holds—AI generated a clean, responsive, functional prototype in seconds. However, for complex, multi-user production software with strict security and edge-case requirements, human developers are still essential to test, debug, and integrate the code properly.
+- **Ratings** (1 = poor, 5 = excellent), with **one reason each**:
+  - Usefulness for real work: **5/5** — Turning a plain-English spec into a working, styled internal utility in under a minute saves hours of boilerplate coding.
+  - Accuracy / quality of the output: **4/5** — The render math (frame counts, node speedup, and time saved) was 100% accurate on the first try, needing only minor UI polish.
+  - Ease of use: **4/5** — Describing features in natural language is effortless, though running a standalone HTML file locally required saving and opening it in a browser.
+  - How much I would trust it without checking: **2/5** — Generated code can hide subtle layout bugs or incomplete input validation, so testing edge cases manually is mandatory.
+- **One error or limitation I found, and how I checked it:** In the initial version, the Frame Rate dropdown was too narrow and clipped the label text (`"60 fps (High..."`), the number input allowed leading zeros (`01`), and when entering both a negative duration (`-15`) and `0` render nodes simultaneously, the form only flagged the first error instead of warning about both invalid fields. I discovered this during Test 3 by intentionally inputting `-15` and `0`, and verified the fix after requesting the UI and validation update.
+- **Free-plan limit I ran into (or "none"):** None (using Google AI Studio's free tier used ~9,700 tokens and had no rate-limit blocks during this session).
+- **Privacy:** According to the course Tool Lab documentation and Google AI Studio's terms, free-tier prompts and generated code in AI Studio may be logged and used by Google to improve its products, so no private company assets, proprietary code, or personal data should be entered.
+- **How I would use this tool in my field (Digital Animation Engineering):** I would use AI app builders to rapidly prototype custom pipeline utilities for an animation studio—such as render-time estimators, naming-convention checkers for Maya/Blender asset exports, or shot-tracking dashboards—before handing them off to pipeline engineers for full integration.
+
+---
+
+## Bonus (optional, up to 5 extra points)
+
+### Bonus Mission: Image Generation & Content Credentials (ShopSmart Marketing)
+
+- **Tool(s) used and account type:** Canva Magic Media (Canva for Education school account) and 
+- **What I did:** I generated a studio product marketing image for ShopSmart's fictional kitchen blender using Canva's AI image generator with a school account, downloaded the original JPG file (`MANGO_SMOOTHIE.jpg`), and uploaded it to `contentcredentials.org/verify` to check for embedded C2PA provenance metadata and review Canva's commercial-use terms.
+- **My exact prompt:** `"Commercial studio product photography of a sleek modern matte-black kitchen blender with a glass jar filled with fresh mango smoothie, sitting on a clean marble countertop, warm morning sunlight, soft shadows, high-end advertising shot, 8k resolution"`
+   - MY LICENSE DIDN'T WORK
+- **Evidence:**
+
+<img width="2720" height="1536" alt="MANGO_SMOOTHIE" src="https://github.com/user-attachments/assets/887ceb87-bf0d-4f56-97ff-4fb6e31c97a5" />
+<img width="1279" height="757" alt="BONUS" src="https://github.com/user-attachments/assets/39ec4891-6647-4098-8056-ebd46f1eb8b5" />
 
 
-### Bonus (optional, up to 5 extra points)
-
-Same card, plus the **Content Credentials** result from contentcredentials.org/verify and the sentence
-from the tool's terms about commercial use (with its link).
+  - **Content Credentials verification result:** When I uploaded the downloaded `MANGO_SMOOTHIE.jpg` file to `contentcredentials.org/verify`, the verifier returned an error / found no embedded C2PA Content Credentials. Unlike Adobe Firefly, Canva does not automatically attach C2PA provenance manifests to standard downloaded JPGs, meaning downstream platforms cannot cryptographically verify that the image is AI-generated.
+  - **Commercial use terms:**
+    - *Sentence from official terms:* Under Canva's AI Product Terms: `"Subject to your compliance with these AI Product Terms and Canva's Terms of Use, you may use Output for any legal purpose, including personal or commercial projects."` However, under **Canva for Education** terms, school accounts are restricted strictly to non-commercial educational use (`"Canva for Education is solely for educational, non-commercial use"`).
+    - *Official link:* `https://www.canva.com/policies/ai-product-terms/` and `https://www.canva.com/policies/education-terms/`
+- **Ratings** (1 = poor, 5 = excellent), with **one reason each**:
+  - Usefulness for real work: **4/5** — Very convenient for generating quick concept visuals directly inside a layout/design editor without switching apps.
+  - Accuracy / quality of the output: **4/5** — Produced convincing studio lighting, glass reflections, and textures on the mango smoothie, with only tiny mechanical flaws upon close inspection.
+  - Ease of use: **5/5** — Typing a prompt inside Canva's editor and downloading the resulting image takes seconds.
+  - How much I would trust it without checking: **2/5** — Outputs must be checked both visually for small AI glitches and legally for account-tier licensing restrictions (especially when using an Education account).
+- **One error or limitation I found, and how I checked it:** Visually, zooming in on the blender's control dial shows a subtle AI glitch where the number zero is repeated twice (`0, 0, 1, 2, 3`). Technically, uploading the downloaded file to `contentcredentials.org/verify` failed to detect any Content Credentials metadata, and reviewing Canva's policy revealed that images made on a school (`Canva for Education`) account cannot be used commercially.
+- **Free-plan limit I ran into (or "none"):** None on the Canva for Education plan during this test (standard free accounts have a monthly AI generation credit cap).
+- **Privacy:** According to Canva's AI Product Terms and Privacy Policy, users can control whether their data is used to improve AI models in privacy settings, and school accounts under Canva for Education have additional student data protections (no private client assets should be entered).
+- **How I would use this tool in my field (Digital Animation Engineering):** I would use Canva's AI generation tools during early pre-production to quickly assemble pitch decks, color scripts, and mood boards for animated shorts or game concepts, while keeping track of licensing restrictions before moving into final 3D production in Maya or Blender.
 
 ---
 
@@ -163,17 +215,21 @@ from the tool's terms about commercial use (with its link).
 
 **C1. Comparison.** Which tool would you actually use again, and which not? Compare at least three of the
 tools you tried, using your ratings and evidence from Part B.
+ - I would definitely use **Gemini Notebook (NotebookLM)** (Accuracy: 5/5, Usefulness: 5/5, Trust: 4/5) and **Google AI Studio** (Usefulness: 5/5, Accuracy: 4/5) again. In Mission 3, NotebookLM proved to be the most reliable tool because every answer was grounded in the uploaded UNESCO PDF with clickable citations (such as confirming the 13-year minimum age threshold on page 34) and it honestly refused to fabricate post-2023 facts about the EU AI Act or GPT-5. Similarly, AI Studio generated a working, dark-mode 3D render calculator in seconds with accurate frame and node math, making it great for fast pipeline prototyping. By contrast, I would **not** rely on **Google Teachable Machine** (Accuracy: 3/5, Trust: 2/5) or **Canva Magic Media** (Trust: 2/5) for final production work: Teachable Machine's accuracy dropped noticeably as soon as lighting or angles shifted from my original desk samples, and Canva Magic Media produced subtle visual glitches (such as duplicating `0` twice on the blender dial) while lacking embedded C2PA Content Credentials and commercial rights under a school account.
+
 
 **C2. Your career.** When AI tools can do routine parts of your future job, which of your skills become
 *more* valuable? Give two concrete examples from your missions.
+ - As a future **Digital Animation Engineer**, when AI can rapidly generate concept art, draft pipeline scripts, or summarize production notes, human skills in **critical quality assurance (edge-case debugging/visual inspection)** and **domain-specific technical judgment & legal compliance** become much more valuable:
+
+1. **Edge-case testing and pipeline debugging (from Mission 4):** While AI Studio built the render calculator's core formula quickly, it missed subtle UI clipping (`"60 fps (High..."`) and incomplete multi-field validation when given negative durations (`-15s`) and `0` render nodes simultaneously. In a real animation studio, an engineer's ability to anticipate edge cases, validate inputs, and integrate scripts cleanly into Maya, Blender, or Unreal Engine is essential so bad data doesn't crash a render farm.
+
+2. **Artistic direction, detail inspection, and licensing awareness (from Mission 2 & Bonus):** In Mission 2, Gemini turned an internal Monday deadline into an external promise to a customer, and in the Bonus mission, Canva's generated product photo looked photorealistic at first glance but hid a dial numbering error (`0, 0, 1, 2, 3`) and carried non-commercial restrictions under an Education account. Human animators and technical directors are needed to catch visual/narrative inconsistencies and ensure all assets are legally cleared before commercial release.
 
 **C3. AI-use disclosure.** Did you use any AI tool to write or edit *this file*? If yes, which one, and for
 what exactly? (Honest disclosure is worth the points; using AI for wording help is allowed if you say so.)
 
-
-
-
-
+ - Yes. I used **Google Gemini** while completing this file to help break down the mission instructions into clear checklists, generate sample test prompts (such as the 3D render calculator specification and the ShopSmart product studio prompt), and translate and polish my observations and tool reviews into clear English. All hands-on tool tests, webcam dataset recordings, document queries, app edge-case tests, and screenshots were performed and verified personally by me.
 
 
 ---
