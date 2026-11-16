@@ -31,6 +31,10 @@ build with them today, and how to use them responsibly.
 
 <img width="560" height="469" alt="Captura de pantalla 2026-11-15 174624" src="https://github.com/user-attachments/assets/f9a8bf14-ea93-4823-8a3d-ca1b77ba0256" />
 
+- Edge filter A highlights the vertical edges of the photo (such as the vertical sides of the cat's nose and face)[cite: 2]. Its 9 numbers are:
+- Row 1: `-1, 0, 1`
+- Row 2: `-2, 0, 2`
+- Row 3: `-1, 0, 1`
 
 
 **A2.** In the *Generative AI* tab, what is the probability of the word **"food"** at temperature **0.5**, and at temperature **1.5**? In one sentence: what does raising the temperature do?
@@ -39,7 +43,7 @@ build with them today, and how to use them responsibly.
 
 <img width="556" height="358" alt="image" src="https://github.com/user-attachments/assets/463fd826-f217-41fc-80fb-41f908c74cb8" />
 
-
+ - At temperature **0.5**, the probability of the word **"food"** is **55.0%**, and at temperature **1.5**, it drops to **29.2%**. Raising the temperature flattens the probability distribution across candidate words, making the model's output more varied and unpredictable rather than always picking the most obvious next word.
 
 **A3.** In the diffusion demo, what share of the original image is kept (√ᾱₜ) at step **t = 250**, and at step **t = 500**?
 
@@ -47,11 +51,13 @@ build with them today, and how to use them responsibly.
 
 <img width="568" height="434" alt="image" src="https://github.com/user-attachments/assets/097b421d-0786-43dd-9a55-1170c477d579" />
 
-
+- At step **t = 250**, the share of the original image kept is **0.724** (72.4%), and at step **t = 500**, it is **0.280** (28.0%).
 
 **A4.** Pick **one** row from any "What the lecture says vs. what is accurate" table and explain the correction in your own words.
 
 *BUILDING WITH GEN AI (S36)
+- Row chosen:** To build a GenAI app 'you will need a framework' such as TensorFlow, PyTorch, or Keras"* vs. *"Those train models. Apps usually call existing models through APIs/SDKs, coding assistants, or app builders.  
+**Explanation:** The old lecture material confuses training a model from scratch with building an application. Today, developers rarely use low-level deep learning frameworks like PyTorch just to build an app; instead, they connect pre-trained models into their software using APIs, SDKs, or AI app builders.
 
 <img width="578" height="249" alt="image" src="https://github.com/user-attachments/assets/112bcdb5-c441-4a48-a45e-4855e2627722" />
 
