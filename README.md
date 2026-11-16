@@ -72,7 +72,10 @@ Copy this card once for each mission.
 - **Tool(s) used and account type:** Google Teachable Machine (no account used / logged out)[cite: 9, 11].
 - **What I did:** I created a standard image classification project with three everyday objects from my desk: a hair clip (*Pinza*), a computer mouse (*Mouse*), and a makeup compact (*Maquillaje*)[cite: 9, 11]. I recorded over 50 webcam samples for each class under the same lighting and background (56, 53, and 53 samples respectively), trained the MobileNet-based model in my browser, and tested its accuracy in the Preview panel under both original and altered conditions
 - **My exact prompts:** None (this tool uses labeled webcam image classes instead of text prompts: `Pinza`, `Mouse`, and `Maquillaje`)
-- **Evidence:** Screenshot `M1_teachable.png` attached below showing the 3 trained classes (+50 samples each) and live classification in the Preview panel
+- **Evidence:** 
+<img width="903" height="565" alt="Captura de pantalla 2026-11-15 183053" src="https://github.com/user-attachments/assets/13cd98fe-76d0-49a2-af67-595dce019237" />
+<img width="998" height="548" alt="Captura de pantalla 2026-11-15 182422" src="https://github.com/user-attachments/assets/9a09971c-1a93-45d8-b782-1c0bdabfdbcc" />
+
   - **Same conditions (10 tests per class):** Pinza: `[X/10]`, Mouse: `[X/10]`, Maquillaje: `[X/10]`[cite: 9].
   - **New conditions (`[ej. dimmer lighting / different angle / closer to camera]` - 10 tests per class):** Pinza: `[X/10]`, Mouse: `[X/10]`, Maquillaje: `[X/10]`.
 - **Ratings** (1 = poor, 5 = excellent), with **one reason each**:
@@ -85,8 +88,39 @@ Copy this card once for each mission.
 - **Privacy:** According to the Teachable Machine FAQ and privacy details, training runs locally inside the web browser; if I close the tab without clicking "Upload my model" or saving to Google Drive, no images or model data are stored on any server.
 - **How I would use this tool in my field - to identify object and volumes.
 
-<img width="903" height="565" alt="Captura de pantalla 2026-11-15 183053" src="https://github.com/user-attachments/assets/13cd98fe-76d0-49a2-af67-595dce019237" />
-<img width="998" height="548" alt="Captura de pantalla 2026-11-15 182422" src="https://github.com/user-attachments/assets/9a09971c-1a93-45d8-b782-1c0bdabfdbcc" />
+
+---
+### Mission 2: Two Assistants, One Work Task (Gemini vs. Copilot Chat)
+
+- **Tool(s) used and account type:** Google Gemini (`school Google account`) and Microsoft Copilot Chat (`personal account`).
+- **What I did:** I pasted the exact same ShopSmart internal memo and three-part task (executive summary, customer reply, and action-item table) into both Gemini and Copilot Chat. Afterward, I asked both assistants the same factual question about the Transformer architecture and verified their answers against the official NeurIPS/arXiv paper (*Attention Is All You Need*, 2017).
+- **My exact prompts:**
+  - Prompt 1: Based ONLY on the internal memo below, please do three things: 1. Summarize it in 3 bullet points for a busy manager. 2. Write a polite reply to the customer complaint in it. 3. Make a table of the action items with an owner and a deadline. [followed by the full ShopSmart memo.
+  - Prompt 2: In what year was the Transformer architecture introduced, and in which paper?
+- **Evidence:**
+
+<img width="470" height="410" alt="M2_gemini 2" src="https://github.com/user-attachments/assets/4b9300be-878a-4406-9ee6-f4a87b945a90" />
+<img width="482" height="640" alt="M2_gemini 1" src="https://github.com/user-attachments/assets/6cc4c9c8-41f0-42d3-a7da-d9d4e4729175" />
+<img width="626" height="383" alt="M2_Copilot 3" src="https://github.com/user-attachments/assets/0cbe7f66-9c0a-4c89-bfe7-e9d77ba1e9ff" />
+<img width="695" height="618" alt="M2_Copilot 2" src="https://github.com/user-attachments/assets/b2f552b1-7c3e-4743-8109-daf5bd20ee05" />
+<img width="656" height="649" alt="M2_Copilot 1" src="https://github.com/user-attachments/assets/042a0259-adfb-4912-b5e8-fea1ad6f6b2c" />
+
+  - **Comparison & Fact-check:** Both models accurately captured all numbers (37 late orders up from 22, 12 returns, 7 headphones, 89 MXN fee, Order #48217) without hallucinating fake deadlines for the Web team[cite: 12, 13, 15, 16]. However, Gemini followed the prompt's language (English) and produced a cleaner, ready-to-send email with a subject line[cite: 15], whereas Copilot switched to Spanish, omitted the order number in the customer email, and left English department names inside a Spanish table[cite: 12, 13]. On the factual check, both correctly answered **2017** and **"Attention Is All You Need"** by Vaswani et al.[cite: 14, 16], which I verified on arXiv (`arxiv.org/abs/1706.03762`); Copilot provided direct source links (`arXiv`) and full author names, whereas Gemini gave a brief unlinked answer[cite: 14, 16].
+- **Ratings** (1 = poor, 5 = excellent), with **one reason each**:
+  - Usefulness for real work: **5/5** — Both turned an unstructured memo into a clean summary, customer email, and action table in seconds.
+  - Accuracy / quality of the output: **4/5** — Neither invented false data, though Gemini was slightly better at respecting language instructions and formatting.
+  - Ease of use: **5/5** — Copy-pasting text and getting structured tables and email drafts requires zero technical setup.
+  - How much I would trust it without checking: **3/5** — Even when models don't blatantly hallucinate, subtle details (like Gemini promising the customer a Monday delivery based on an internal team deadline, or Copilot dropping an order number) still require human review before sending.
+- **One error or limitation I found, and how I checked it:** Copilot ignored the prompt's language (replying in Spanish to an English prompt), included a label saying *"Opción 1: Profesional y directa"* without providing a second option, and left out Order #48217 in the reply to Ana López.
+- Meanwhile, Gemini turned an internal Customer Care target ("by Monday") into an external promise to the customer. I caught both issues by comparing their outputs line-by-line against the original memo.
+- **Free-plan limit I ran into (or "none"):** None (both worked smoothly without hitting message caps during this task).
+- **Privacy:** According to the course Tool Lab documentation and Google/Microsoft privacy policies, when signed in with a school account (Google Workspace for Education or Microsoft 365 Education with the enterprise protection shield), prompts and uploaded memos are not reviewed by humans or used to train public AI models (unlike free personal accounts, where chat history may be used for training unless disabled in settings).
+-  **How I would use this tool in my field (Digital Animation Engineering):** I would use Gemini or Copilot to summarize lengthy art-direction and client review notes into clear revision checklists, assign tasks with deadlines to modeling, rigging, and lighting artists, and draft professional status updates for producers or clients.
+
+---
+
+https://notebook.google.com/notebook/a705d02f-45c9-428f-bef5-2da6d80ffe42
+
 
 
 
